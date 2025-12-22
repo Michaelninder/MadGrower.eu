@@ -14,6 +14,15 @@
     --color-secondary-hover: #eab308;
     --color-tertiary: #2dd4bf;
     --color-tertiary-hover: #14b8a6;
+
+    --border-radius-sm: 0.25rem;
+    --border-radius-md: 0.5rem;
+    --border-radius-lg: 1rem;
+    --border-radius-full: 9999px;
+}
+
+* {
+    transition-duration: .3s;
 }
 
 body {
@@ -46,6 +55,8 @@ button:hover {
     border: none;
     padding: 0.5rem 1rem;
     cursor: var(--cursor-pointer);
+    text-decoration: none;
+    display: inline-block;
 }
 
 .button-primary:hover {
@@ -58,6 +69,8 @@ button:hover {
     border: none;
     padding: 0.5rem 1rem;
     cursor: var(--cursor-pointer);
+    text-decoration: none;
+    display: inline-block;
 }
 
 .button-secondary:hover {
@@ -70,8 +83,26 @@ button:hover {
     border: none;
     padding: 0.5rem 1rem;
     cursor: var(--cursor-pointer);
+    text-decoration: none;
+    display: inline-block;
 }
 
 .button-tertiary:hover {
     background-color: var(--color-tertiary-hover);
+}
+
+.rounded-sm {
+    border-radius: var(--border-radius-sm);
+}
+
+.rounded-md {
+    border-radius: var(--border-radius-md);
+}
+
+.rounded-lg {
+    border-radius: var(--border-radius-lg);
+}
+
+.rounded-full {
+    border-radius: var(--border-radius-full);
 }
