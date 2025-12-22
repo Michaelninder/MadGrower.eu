@@ -8,12 +8,12 @@
     --background-color: rgb(48, 48, 48);
     --text-main: #fafafa;
 
-    --color-primary: #a78bfa;
-    --color-primary-hover: #8b5cf6;
-    --color-secondary: #facc15;
-    --color-secondary-hover: #eab308;
-    --color-tertiary: #2dd4bf;
-    --color-tertiary-hover: #14b8a6;
+    --color-primary: #ADC66F;
+    --color-primary-hover: #ADC66F;
+    --color-secondary: #768C44;
+    --color-secondary-hover: #768C44;
+    --color-tertiary: #334B10;
+    --color-tertiary-hover: #334B10;
 
     --border-radius-sm: 0.25rem;
     --border-radius-md: 0.5rem;
@@ -51,7 +51,7 @@ button:hover {
 
 .button-primary {
     background-color: var(--color-primary);
-    color: var(--text-main);
+    color: var(--background-color);
     border: none;
     padding: 0.5rem 1rem;
     cursor: var(--cursor-pointer);
@@ -79,7 +79,7 @@ button:hover {
 
 .button-tertiary {
     background-color: var(--color-tertiary);
-    color: var(--background-color);
+    color: var(--text-main);
     border: none;
     padding: 0.5rem 1rem;
     cursor: var(--cursor-pointer);
