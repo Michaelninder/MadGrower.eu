@@ -11,7 +11,9 @@
     --color-primary: #a78bfa;
     --color-primary-hover: #8b5cf6;
     --color-secondary: #facc15;
+    --color-secondary-hover: #eab308;
     --color-tertiary: #2dd4bf;
+    --color-tertiary-hover: #14b8a6;
 }
 
 body {
@@ -36,4 +38,40 @@ button:hover {
 
 .text-tertiary {
     color: var(--color-tertiary);
+}
+
+.button-primary {
+    background-color: var(--color-primary);
+    color: var(--text-main);
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: var(--cursor-pointer);
+}
+
+.button-primary:hover {
+    background-color: var(--color-primary-hover);
+}
+
+.button-secondary {
+    background-color: var(--color-secondary);
+    color: var(--background-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: var(--cursor-pointer);
+}
+
+.button-secondary:hover {
+    background-color: var(--color-secondary-hover);
+}
+
+.button-tertiary {
+    background-color: var(--color-tertiary);
+    color: var(--background-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: var(--cursor-pointer);
+}
+
+.button-tertiary:hover {
+    background-color: var(--color-tertiary-hover);
 }
