@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
 
 :root {
-    --cursor-default: url('.../assets/cursors/default.svg') 12 12, auto;
-    --cursor-pointer: url('.../assets/cursors/pointer.svg') 12 12, pointer;
+    --cursor-default: url('../assets/cursors/default.svg') 12 12, auto;
+    --cursor-pointer: url('../assets/cursors/pointer.svg') 12 12, pointer;
     --font-family: 'Figtree', sans-serif;
 
     --background-color: rgb(48, 48, 48);
     --text-main: #fafafa;
 
     --color-primary: #ADC66F;
-    --color-primary-hover: #ADC66F;
+    --color-primary-hover: #BFD98D;
     --color-secondary: #768C44;
-    --color-secondary-hover: #768C44;
+    --color-secondary-hover: #8EA35E;
     --color-tertiary: #334B10;
-    --color-tertiary-hover: #334B10;
+    --color-tertiary-hover: #456126;
 
     --border-radius-sm: 0.25rem;
     --border-radius-md: 0.5rem;
@@ -30,11 +30,12 @@ body {
     color: var(--text-main);
     cursor: var(--cursor-default);
     font-family: var(--font-family);
+    margin-inline: 2.5vw;
 }
 
 a:hover,
 button:hover {
-    cursor: var(--cursor-pointer);
+    cursor: var(--cursor-pointer) !important;
 }
 
 .text-primary {
@@ -105,4 +106,34 @@ button:hover {
 
 .rounded-full {
     border-radius: var(--border-radius-full);
+}
+
+h1::after { --dynamic-scale: 3px; }
+h2::after { --dynamic-scale: 2.25px; }
+h3::after { --dynamic-scale: 1.33px; }
+
+h1::after,
+h2::after,
+h3::after {
+    content: "";
+    display: block;
+    background-color: var(--color-primary);
+    width: calc(250px + var(--dynamic-scale) * -70);
+    height: calc(var(--dynamic-scale) * 1.321);
+    border-radius: 4px;
+    margin-top: -0.125em;
+    transition-duration: .25s;
+}
+
+h1:hover::after,
+h2:hover::after,
+h3:hover::after {
+    width: calc(250px + var(--dynamic-scale) * -50);
+    transition-duration: .3s;
+}
+
+::selection {
+    /*background-color: var(--color-secondary-hover);*/
+    background-color: var(--color-primary);
+    color: var(--background-color);
 }
