@@ -1,13 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
 :root {
     --cursor-default: url('.../assets/cursors/default.svg') 12 12, auto;
     --cursor-pointer: url('.../assets/cursors/pointer.svg') 12 12, pointer;
+    --font-family: 'Figtree', sans-serif;
+
+    --background-color: rgb(48, 48, 48);
+    --text-main: #fafafa;
+
+    --color-primary: #a78bfa;
+    --color-primary-hover: #8b5cf6;
+    --color-secondary: #facc15;
+    --color-tertiary: #2dd4bf;
 }
 
 body {
+    background: var(--background-color);
+    color: var(--text-main);
     cursor: var(--cursor-default);
+    font-family: var(--font-family);
 }
 
 a:hover,
 button:hover {
     cursor: var(--cursor-pointer);
+}
+
+.text-primary {
+    color: var(--color-primary);
+}
+
+.text-secondary {
+    color: var(--color-secondary);
+}
+
+.text-tertiary {
+    color: var(--color-tertiary);
 }
