@@ -1,0 +1,13 @@
+:root {
+    --cursor-default: url('.../assets/cursors/default.svg') 12 12, auto;
+    --cursor-pointer: url('.../assets/cursors/pointer.svg') 12 12, pointer;
+}
+
+body {
+    cursor: var(--cursor-default);
+}
+
+a:hover,
+button:hover {
+    cursor: var(--cursor-pointer);
+}
