@@ -42,12 +42,27 @@ button:hover {
     color: var(--color-primary);
 }
 
+.text-primary::selection {
+    color: var(--background-color);
+    background-color: var(--color-primary);
+}
+
 .text-secondary {
     color: var(--color-secondary);
 }
 
+.text-secondary::selection {
+    color: var(--background-color);
+    background-color: var(--color-secondary);
+}
+
 .text-tertiary {
     color: var(--color-tertiary);
+}
+
+.text-tertiary::selection {
+    color: var(--text-main);
+    background-color: var(--color-tertiary);
 }
 
 .button-primary {
@@ -108,9 +123,11 @@ button:hover {
     border-radius: var(--border-radius-full);
 }
 
-h1::after { --dynamic-scale: 3px; }
-h2::after { --dynamic-scale: 2.25px; }
-h3::after { --dynamic-scale: 1.33px; }
+h1,
+h2,
+h3 {
+    width: fit-content;
+}
 
 h1::after,
 h2::after,
@@ -118,19 +135,23 @@ h3::after {
     content: "";
     display: block;
     background-color: var(--color-primary);
-    width: calc(250px + var(--dynamic-scale) * -70);
-    height: calc(var(--dynamic-scale) * 1.321);
+    width: 32%;
+    height: 4px;
     border-radius: 4px;
     margin-top: -0.125em;
-    transition-duration: .25s;
+    transition: width 0.25s ease-in-out;
 }
 
 h1:hover::after,
 h2:hover::after,
 h3:hover::after {
-    width: calc(250px + var(--dynamic-scale) * -50);
-    transition-duration: .3s;
+    width: 86%;
+    transition-duration: 0.3s;
 }
+
+h1::after { height: 4px; }
+h2::after { height: 3px; }
+h3::after { height: 1.75px; }
 
 ::selection {
     /*background-color: var(--color-secondary-hover);*/
